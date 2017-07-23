@@ -15,7 +15,7 @@ Copyright 2016 Garret Yoder
 
 |Original version|Mod version|
 |---|---|
-|x|x|
+|<img src="https://raw.githubusercontent.com/marcoscgdev/Colorful/master/screenshots/device-2017-07-23-152248.png" width="350">|<img src="https://raw.githubusercontent.com/marcoscgdev/Colorful/master/screenshots/device-2017-07-23-152526.png" width="350">|
 
 ## Installation
 Add jitpack to your maven sources
