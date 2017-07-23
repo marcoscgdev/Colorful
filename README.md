@@ -1,9 +1,7 @@
 # Colorful
 [![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful)
 
-
 Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
-
 
 ## License
 
@@ -11,6 +9,11 @@ Colorful is licensed under the Apache 2.0 License, in common Android style.
 
 Copyright 2016 Garret Yoder
 
+## Mod version features
+
+|Original version|Mod version|
+|---|---|
+|x|x|
 
 ## Installation
 Add jitpack to your maven sources
