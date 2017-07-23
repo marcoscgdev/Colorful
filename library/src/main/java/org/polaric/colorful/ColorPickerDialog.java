@@ -1,14 +1,14 @@
 package org.polaric.colorful;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class ColorPickerDialog extends Dialog implements View.OnClickListener, ColorPickerAdapter.OnItemClickListener {
+public class ColorPickerDialog extends AppCompatDialog implements View.OnClickListener, ColorPickerAdapter.OnItemClickListener {
     private RecyclerView recycler;
     private Toolbar toolbar;
     private OnColorSelectedListener listener;
