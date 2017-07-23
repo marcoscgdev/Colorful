@@ -1,4 +1,4 @@
-# Colorful
+# Colorful-MOD
 [![](https://jitpack.io/v/marcoscgdev/Colorful-MOD.svg)](https://jitpack.io/#marcoscgdev/Colorful-MOD)
 
 Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
