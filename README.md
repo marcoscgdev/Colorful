@@ -11,6 +11,7 @@ Copyright 2016 Garret Yoder
 
 ## Mod version features
 
+- ColorPickerDialog
 |Original version|Mod version|
 |---|---|
 |x|x|
