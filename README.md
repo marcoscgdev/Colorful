@@ -1,5 +1,5 @@
 # Colorful
-[![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful)
+[![](https://jitpack.io/v/marcoscgdev/Colorful-MOD.svg)](https://jitpack.io/#marcoscgdev/Colorful-MOD)
 
 Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
 
@@ -49,7 +49,7 @@ allprojects {
 Add Colorful as a dependency to your `build.gradle`
 ```groovy
 dependencies {
-    compile 'com.github.garretyoder:Colorful:1.1'
+    compile 'com.github.marcoscgdev:Colorful-MOD:1.0'
 }
 ```
 
