@@ -11,7 +11,7 @@ Copyright 2016 Garret Yoder
 
 ## Mod version features
 
-- ColorPickerDialog
+- ColorPickerDialog (pre-lollipop bug fixed and equitable padding)
 
 |Original version|Mod version|
 |---|---|
