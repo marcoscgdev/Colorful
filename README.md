@@ -31,7 +31,7 @@ Copyright 2016 Garret Yoder
     
     ```java
     Colorful.config(this)
-        .primaryColor(color)
+        .primaryColor(Colorful.ThemeColor.RED)
         .update(true) // Use this method. It will recreate the current activity.
         .apply();
     ```
