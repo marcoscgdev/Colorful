@@ -19,7 +19,7 @@ Copyright 2016 Garret Yoder
 
 - New implementations:
 
-    - Get theme colors
+    - Get theme colors directly
     
     ```java
     int colorPrimary = Colorful.getPrimaryColor(this);
