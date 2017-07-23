@@ -17,6 +17,25 @@ Copyright 2016 Garret Yoder
 |---|---|
 |<img src="https://raw.githubusercontent.com/marcoscgdev/Colorful/master/screenshots/device-2017-07-23-152248.png" width="350">|<img src="https://raw.githubusercontent.com/marcoscgdev/Colorful/master/screenshots/device-2017-07-23-152526.png" width="350">|
 
+- New implementations:
+
+    - Get theme colors
+    
+    ```java
+    int colorPrimary = Colorful.getPrimaryColor(this);
+    int colorPrimaryDark = Colorful.getPrimaryDarkColor(this);
+    int colorAccent = Colorful.getAccentColor(this);
+    ```
+    
+    - Update UI when config changes
+    
+    ```java
+    Colorful.config(this)
+        .primaryColor(color)
+        .update(true) // Use this method. It will recreate the current activity.
+        .apply();
+    ```
+
 ## Installation
 Add jitpack to your maven sources
 ```groovy
