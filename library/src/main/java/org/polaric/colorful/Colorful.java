@@ -2,10 +2,12 @@ package org.polaric.colorful;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
+import android.util.TypedValue;
 
 public class Colorful {
     private static ThemeDelegate delegate;
@@ -14,6 +16,7 @@ public class Colorful {
     private static boolean isTranslucent = Defaults.trans;
     private static boolean isDark = Defaults.darkTheme;
     private static String themeString;
+    private static boolean updateAct = false;
 
     private Colorful() {
         // prevent initialization
@@ -176,11 +179,55 @@ public class Colorful {
             return this;
         }
 
+        public Config update(boolean update) {
+            updateAct = update;
+            return this;
+        }
+
         public void apply() {
             writeValues(context);
             themeString=generateThemeString();
             delegate = new ThemeDelegate(context, primaryColor, accentColor, isTranslucent, isDark);
+            if (updateAct)
+                ((Activity) context).recreate();
         }
+    }
+
+    // Custom getColor utils
+    public static int getPrimaryColor(Context context) {
+        int colorAttr;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            colorAttr = android.R.attr.colorPrimary;
+        } else {
+            colorAttr = context.getResources().getIdentifier("colorPrimary", "attr", context.getPackageName());
+        }
+        TypedValue outValue = new TypedValue();
+        context.getTheme().resolveAttribute(colorAttr, outValue, true);
+        return outValue.data;
+    }
+
+    public static int getPrimaryDarkColor(Context context) {
+        int colorAttr;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            colorAttr = android.R.attr.colorPrimaryDark;
+        } else {
+            colorAttr = context.getResources().getIdentifier("colorPrimaryDark", "attr", context.getPackageName());
+        }
+        TypedValue outValue = new TypedValue();
+        context.getTheme().resolveAttribute(colorAttr, outValue, true);
+        return outValue.data;
+    }
+
+    public static int getAccentColor(Context context) {
+        int colorAttr;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            colorAttr = android.R.attr.colorAccent;
+        } else {
+            colorAttr = context.getResources().getIdentifier("colorAccent", "attr", context.getPackageName());
+        }
+        TypedValue outValue = new TypedValue();
+        context.getTheme().resolveAttribute(colorAttr, outValue, true);
+        return outValue.data;
     }
 
 }
